@@ -1,0 +1,43 @@
+{
+    "name": "com.arushasoft.stating",
+    "version": "1.0.0",
+    "description": "Gameplay state and player stats module used across the project (manages player state, stats, gang-related state and simple persistence helpers).",
+    "displayName": "Stating Module",
+    "unity": "2019.1",
+    "category": "Gameplay",
+
+    "author": {
+        "name": "ArushaSoft",
+        "email": "ArushaSoft@gmail.com",
+        "url": "http://ArushaSoft.com/"
+    },
+
+    "changelogUrl": "https://ArushaSoft.com/stating/changelog.html",
+
+    "dependencies": {
+    },
+
+    "documentationUrl": "http://ArushaSoft.com/docs/stating",
+    "hideInEditor": false,
+
+    "keywords": [
+        "stating",
+        "state",
+        "stats",
+        "player",
+        "gameplay"
+    ],
+
+    "licensesUrl": "http://ArushaSoft.com/licensing.html",
+
+
+    "publishConfig": { "registry": "https://npm.pkg.gitlab.com/@ArushaSoft" },
+
+    "repository": {
+      "type": "git",  
+      "url": "https://github.com/Arusha-Soft/module-stating.git",
+      "directory": "Assets/Stating"
+    },
+
+    "license": "MIT"
+}
