@@ -42,6 +42,15 @@ namespace AS.Modules.Stating.Core
 
         protected virtual void OnInitializeAsyncStateTree() { }
 
+        /// <summary>
+        /// Adds custom state objects to the provided collection.
+        /// </summary>
+        /// <remarks>
+        /// Implementations should populate the provided <paramref name="states"/> list with any states that
+        /// should be initialized and entered automatically with the tree. These are not "sub-states" you switch
+        /// between; they are concurrent/persistent states managed for the tree's lifetime.
+        /// </remarks>
+        /// <param name="states">A list to which new state objects should be added. The list is provided by the caller and may already contain existing states.</param>
         protected abstract void AddStates(List<State<T>> states);
 
         protected abstract void OnEnterAsyncTree();
