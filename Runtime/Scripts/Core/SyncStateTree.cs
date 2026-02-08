@@ -7,12 +7,12 @@
             OnInitializeSyncStateTree();
         }
 
-        protected sealed override void OnEnter()
+        protected sealed override void OnEnterTree()
         {
             OnEnterSyncTree();
         }
 
-        protected sealed override void OnExit()
+        protected sealed override void OnExitTree()
         {
             OnExitSyncTree();
         }
