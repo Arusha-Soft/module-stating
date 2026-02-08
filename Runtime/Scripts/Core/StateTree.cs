@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace AS.Modules.Stating
 {
+    [System.Obsolete("StateTree class is deprecated, Some of the functions are may change in next version, use AsyncStateTree instead.")] 
     public abstract class StateTree<T> : State<T> where T : Target
     {
         private StateMachine m_Machine;
@@ -10,7 +11,7 @@ namespace AS.Modules.Stating
 
         protected State<T> CurrentState { private set; get; }
 
-        protected sealed override void OnInitialize()
+        protected override void OnInitialize()
         {
             AddSubStates(m_SubStates);
 
@@ -22,19 +23,19 @@ namespace AS.Modules.Stating
             OnInitializeStateTree();
         }
 
-        protected sealed override void OnEnter()
+        protected override void OnEnter()
         {
             OnEnterTree();
         }
 
-        protected sealed override void OnExit()
+        protected override void OnExit()
         {
             OnExitTree();
         }
 
         protected void Switch(State<T> subState)
         {
-            if(CurrentState == subState)
+            if (CurrentState == subState)
             {
                 return;
             }
