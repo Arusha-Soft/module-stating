@@ -4,6 +4,7 @@
     {
         protected sealed override void OnInitialize()
         {
+            base.OnInitialize();
             OnInitializeSyncStateTree();
         }
 
