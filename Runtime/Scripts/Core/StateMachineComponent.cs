@@ -10,6 +10,10 @@ namespace AS.Modules.Stating.Core
 
         private StateMachine m_Machine;
 
+        private void OnEnable()
+        {
+            
+        }
         private void Awake()
         {
             Initialize();
@@ -34,9 +38,14 @@ namespace AS.Modules.Stating.Core
             m_Machine.SwitchState(runnable);
         }
 
-        private void OnDestroy()
+        private void OnApplicationQuit() //TODO: this one is quick fix, we must more checks on this in free time.
         {
-            m_Machine.SwitchState(null);
+            Switch(null);
+        }
+
+        private void OnDisable()
+        {
+            //Switch(null);
         }
     }
 }
