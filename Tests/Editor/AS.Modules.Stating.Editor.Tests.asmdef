@@ -1,0 +1,8 @@
+{
+    "name": "AS.Modules.Stating.Editor.Tests",
+    "rootNamespace": "AS.Modules.Stating.Tests.Editor",
+    "references": ["AS.Modules.Stating", "AS.Modules.Stating.Editor", "AS.Modules.Stating.Tests"],
+    "includePlatforms": ["Editor"],
+    "optionalUnityReferences": ["TestAssemblies"],
+    "autoReferenced": false
+}

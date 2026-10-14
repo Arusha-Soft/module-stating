@@ -1,0 +1,6 @@
+{
+    "name": "AS.Modules.Stating.Samples",
+    "rootNamespace": "AS.Modules.Stating.Samples",
+    "references": ["AS.Modules.Stating"],
+    "autoReferenced": true
+}

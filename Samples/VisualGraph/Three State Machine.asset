@@ -1,0 +1,533 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e40770186704239e47caadf57e5eb619, type: 3}
+  m_Name: Three State Machine
+  m_EditorClassIdentifier: 
+  Graph:
+    Version: 1
+    Id: 58514fdc9e0d4ffaba8da8c348a8ae48
+    Name: "Movement \xB7 Three States"
+    Description: 
+    TransitionOrder: 0
+    Nodes:
+    - Id: efcdd052887f4e2da7e5e4fa4cdf3972
+      Name: Entry
+      Kind: 1
+      Position:
+        serializedVersion: 2
+        x: -36
+        y: 103
+        width: 140
+        height: 103
+      Color: {r: 0.22, g: 0.42, b: 0.52, a: 1}
+      Icon: {fileID: 0}
+      Expanded: 1
+      FieldsExpanded: 0
+      FunctionsExpanded: 0
+      LifecycleExpanded: 0
+      Description: 
+      StateTypeName: 
+      IsLinked: 0
+      Template: {fileID: 0}
+      Fields: []
+      Variables: []
+      Overrides: []
+      Children:
+        rid: -2
+      IsSubGraphLinked: 0
+      SubGraphAsset: {fileID: 0}
+      ResumeChildren: 0
+      BreakOnEnter: 0
+      BreakOnExit: 0
+      VariableId: 
+      TargetNodeId: 
+      MethodId: 
+      EventName: Event
+      TransitionId: 
+      Comparison: 0
+      Value:
+        TypeName: System.Single, mscorlib
+        IsNull: 0
+        Boolean: 0
+        Integer: 0
+        Number: 0
+        Text: 
+        Vector: {x: 0, y: 0, z: 0, w: 0}
+        Object: {fileID: 0}
+        Managed:
+          rid: -2
+        Items: []
+        MemberNames: []
+      Arguments: []
+      Custom:
+        rid: -2
+    - Id: d2917c7ec7404b3e9410bbd0ae495c95
+      Name: Idle
+      Kind: 0
+      Position:
+        serializedVersion: 2
+        x: 260
+        y: 140
+        width: 225
+        height: 226
+      Color: {r: 0.22, g: 0.42, b: 0.52, a: 1}
+      Icon: {fileID: 0}
+      Expanded: 1
+      FieldsExpanded: 0
+      FunctionsExpanded: 1
+      LifecycleExpanded: 0
+      Description: 
+      StateTypeName: AS.Modules.Stating.Graph.GraphState, AS.Modules.Stating
+      IsLinked: 0
+      Template: {fileID: 0}
+      Fields:
+      - MemberId: AS.Modules.Stating.Graph.GraphState::m_Message
+        Value:
+          TypeName: System.String, mscorlib
+          IsNull: 0
+          Boolean: 0
+          Integer: 0
+          Number: 0
+          Text: Idle
+          Vector: {x: 0, y: 0, z: 0, w: 0}
+          Object: {fileID: 0}
+          Managed:
+            rid: -2
+          Items: []
+          MemberNames: []
+      - MemberId: AS.Modules.Stating.Graph.GraphState::m_LogLifecycle
+        Value:
+          TypeName: System.Boolean, mscorlib
+          IsNull: 0
+          Boolean: 1
+          Integer: 0
+          Number: 0
+          Text: 
+          Vector: {x: 0, y: 0, z: 0, w: 0}
+          Object: {fileID: 0}
+          Managed:
+            rid: -2
+          Items: []
+          MemberNames: []
+      Variables: []
+      Overrides: []
+      Children:
+        rid: -2
+      IsSubGraphLinked: 0
+      SubGraphAsset: {fileID: 0}
+      ResumeChildren: 0
+      BreakOnEnter: 0
+      BreakOnExit: 0
+      VariableId: 
+      TargetNodeId: 
+      MethodId: 
+      EventName: Event
+      TransitionId: 
+      Comparison: 0
+      Value:
+        TypeName: System.Single, mscorlib
+        IsNull: 0
+        Boolean: 0
+        Integer: 0
+        Number: 0
+        Text: 
+        Vector: {x: 0, y: 0, z: 0, w: 0}
+        Object: {fileID: 0}
+        Managed:
+          rid: -2
+        Items: []
+        MemberNames: []
+      Arguments: []
+      Custom:
+        rid: -2
+    - Id: 9d791ee3c7cb4f9498fa062261b54f20
+      Name: Walking
+      Kind: 0
+      Position:
+        serializedVersion: 2
+        x: 650
+        y: 140
+        width: 225
+        height: 163
+      Color: {r: 0.22, g: 0.42, b: 0.52, a: 1}
+      Icon: {fileID: 0}
+      Expanded: 1
+      FieldsExpanded: 0
+      FunctionsExpanded: 0
+      LifecycleExpanded: 0
+      Description: 
+      StateTypeName: AS.Modules.Stating.Graph.GraphState, AS.Modules.Stating
+      IsLinked: 0
+      Template: {fileID: 0}
+      Fields:
+      - MemberId: AS.Modules.Stating.Graph.GraphState::m_Message
+        Value:
+          TypeName: System.String, mscorlib
+          IsNull: 0
+          Boolean: 0
+          Integer: 0
+          Number: 0
+          Text: Walking
+          Vector: {x: 0, y: 0, z: 0, w: 0}
+          Object: {fileID: 0}
+          Managed:
+            rid: -2
+          Items: []
+          MemberNames: []
+      - MemberId: AS.Modules.Stating.Graph.GraphState::m_LogLifecycle
+        Value:
+          TypeName: System.Boolean, mscorlib
+          IsNull: 0
+          Boolean: 1
+          Integer: 0
+          Number: 0
+          Text: 
+          Vector: {x: 0, y: 0, z: 0, w: 0}
+          Object: {fileID: 0}
+          Managed:
+            rid: -2
+          Items: []
+          MemberNames: []
+      Variables: []
+      Overrides: []
+      Children:
+        rid: -2
+      IsSubGraphLinked: 0
+      SubGraphAsset: {fileID: 0}
+      ResumeChildren: 0
+      BreakOnEnter: 0
+      BreakOnExit: 0
+      VariableId: 
+      TargetNodeId: 
+      MethodId: 
+      EventName: Event
+      TransitionId: 
+      Comparison: 0
+      Value:
+        TypeName: System.Single, mscorlib
+        IsNull: 0
+        Boolean: 0
+        Integer: 0
+        Number: 0
+        Text: 
+        Vector: {x: 0, y: 0, z: 0, w: 0}
+        Object: {fileID: 0}
+        Managed:
+          rid: -2
+        Items: []
+        MemberNames: []
+      Arguments: []
+      Custom:
+        rid: -2
+    - Id: 36727d0c2b7c43068581f4fc0a327791
+      Name: Running
+      Kind: 0
+      Position:
+        serializedVersion: 2
+        x: 1040
+        y: 140
+        width: 225
+        height: 163
+      Color: {r: 0.22, g: 0.42, b: 0.52, a: 1}
+      Icon: {fileID: 0}
+      Expanded: 1
+      FieldsExpanded: 0
+      FunctionsExpanded: 0
+      LifecycleExpanded: 0
+      Description: 
+      StateTypeName: AS.Modules.Stating.Graph.GraphState, AS.Modules.Stating
+      IsLinked: 0
+      Template: {fileID: 0}
+      Fields:
+      - MemberId: AS.Modules.Stating.Graph.GraphState::m_Message
+        Value:
+          TypeName: System.String, mscorlib
+          IsNull: 0
+          Boolean: 0
+          Integer: 0
+          Number: 0
+          Text: Running
+          Vector: {x: 0, y: 0, z: 0, w: 0}
+          Object: {fileID: 0}
+          Managed:
+            rid: -2
+          Items: []
+          MemberNames: []
+      - MemberId: AS.Modules.Stating.Graph.GraphState::m_LogLifecycle
+        Value:
+          TypeName: System.Boolean, mscorlib
+          IsNull: 0
+          Boolean: 1
+          Integer: 0
+          Number: 0
+          Text: 
+          Vector: {x: 0, y: 0, z: 0, w: 0}
+          Object: {fileID: 0}
+          Managed:
+            rid: -2
+          Items: []
+          MemberNames: []
+      Variables: []
+      Overrides: []
+      Children:
+        rid: -2
+      IsSubGraphLinked: 0
+      SubGraphAsset: {fileID: 0}
+      ResumeChildren: 0
+      BreakOnEnter: 0
+      BreakOnExit: 0
+      VariableId: 
+      TargetNodeId: 
+      MethodId: 
+      EventName: Event
+      TransitionId: 
+      Comparison: 0
+      Value:
+        TypeName: System.Single, mscorlib
+        IsNull: 0
+        Boolean: 0
+        Integer: 0
+        Number: 0
+        Text: 
+        Vector: {x: 0, y: 0, z: 0, w: 0}
+        Object: {fileID: 0}
+        Managed:
+          rid: -2
+        Items: []
+        MemberNames: []
+      Arguments: []
+      Custom:
+        rid: -2
+    - Id: 6ccb9ee9dc284748988c4ddc2f2b7e6e
+      Name: Any State
+      Kind: 3
+      Position:
+        serializedVersion: 2
+        x: -17
+        y: 413
+        width: 140
+        height: 103
+      Color: {r: 0.22, g: 0.42, b: 0.52, a: 1}
+      Icon: {fileID: 0}
+      Expanded: 1
+      FieldsExpanded: 0
+      FunctionsExpanded: 0
+      LifecycleExpanded: 0
+      Description: 
+      StateTypeName: 
+      IsLinked: 0
+      Template: {fileID: 0}
+      Fields: []
+      Variables: []
+      Overrides: []
+      Children:
+        rid: -2
+      IsSubGraphLinked: 0
+      SubGraphAsset: {fileID: 0}
+      ResumeChildren: 0
+      BreakOnEnter: 0
+      BreakOnExit: 0
+      VariableId: 
+      TargetNodeId: 
+      MethodId: 
+      EventName: Event
+      TransitionId: 
+      Comparison: 0
+      Value:
+        TypeName: System.Single, mscorlib
+        IsNull: 0
+        Boolean: 0
+        Integer: 0
+        Number: 0
+        Text: 
+        Vector: {x: 0, y: 0, z: 0, w: 0}
+        Object: {fileID: 0}
+        Managed:
+          rid: -2
+        Items: []
+        MemberNames: []
+      Arguments: []
+      Custom:
+        rid: -2
+    Connections:
+    - Id: 38c3ca1b6842448aa3e5896542e41adc
+      SourceNodeId: efcdd052887f4e2da7e5e4fa4cdf3972
+      SourcePort: out
+      TargetNodeId: d2917c7ec7404b3e9410bbd0ae495c95
+      TargetPort: in
+      Kind: 0
+      Transition:
+        Enabled: 1
+        Priority: 0
+        Delay: 0
+        ExitTime: 0
+        AllowSelf: 0
+        RequireChildCompletion: 0
+        Breakpoint: 0
+        EventName: 
+        ConditionNodeId: 
+        ConditionMode: 0
+        Conditions: []
+        OnTakenNodeId: 
+        Description: 
+    - Id: e5a8edcbb4c24a77bbcb98040707f18b
+      SourceNodeId: d2917c7ec7404b3e9410bbd0ae495c95
+      SourcePort: out
+      TargetNodeId: 9d791ee3c7cb4f9498fa062261b54f20
+      TargetPort: in
+      Kind: 0
+      Transition:
+        Enabled: 1
+        Priority: 0
+        Delay: 0
+        ExitTime: 0
+        AllowSelf: 0
+        RequireChildCompletion: 0
+        Breakpoint: 0
+        EventName: 
+        ConditionNodeId: 
+        ConditionMode: 0
+        Conditions:
+        - rid: 4756295206171574272
+        OnTakenNodeId: 
+        Description: 
+    - Id: 2ea4634afe274deeb4ec3e6827613fb0
+      SourceNodeId: 9d791ee3c7cb4f9498fa062261b54f20
+      SourcePort: out
+      TargetNodeId: 36727d0c2b7c43068581f4fc0a327791
+      TargetPort: in
+      Kind: 0
+      Transition:
+        Enabled: 1
+        Priority: 0
+        Delay: 0
+        ExitTime: 0
+        AllowSelf: 0
+        RequireChildCompletion: 0
+        Breakpoint: 0
+        EventName: 
+        ConditionNodeId: 
+        ConditionMode: 0
+        Conditions:
+        - rid: 4756295206171574273
+        OnTakenNodeId: 
+        Description: 
+    - Id: 8baf5a4de4334d9cae1a9749c08a9e74
+      SourceNodeId: 6ccb9ee9dc284748988c4ddc2f2b7e6e
+      SourcePort: out
+      TargetNodeId: d2917c7ec7404b3e9410bbd0ae495c95
+      TargetPort: in
+      Kind: 0
+      Transition:
+        Enabled: 1
+        Priority: 100
+        Delay: 0
+        ExitTime: 0
+        AllowSelf: 0
+        RequireChildCompletion: 0
+        Breakpoint: 0
+        EventName: Reset
+        ConditionNodeId: 
+        ConditionMode: 0
+        Conditions: []
+        OnTakenNodeId: 
+        Description: 
+    Variables:
+    - Id: f098e394c3774d2c9e9f041962ea604d
+      Name: Speed
+      Category: Movement
+      Description: Use the runner Blackboard or the sample control panel in Play
+        Mode.
+      Scope: 0
+      Exposed: 1
+      DefaultValue:
+        TypeName: System.Single, mscorlib
+        IsNull: 0
+        Boolean: 0
+        Integer: 0
+        Number: 0
+        Text: 
+        Vector: {x: 0, y: 0, z: 0, w: 0}
+        Object: {fileID: 0}
+        Managed:
+          rid: -2
+        Items: []
+        MemberNames: []
+    Groups:
+    - Id: 1dc93877222a4dd3a7264ab6c5fef56c
+      Title: Movement
+      Position:
+        serializedVersion: 2
+        x: 234.99998
+        y: 80.99998
+        width: 1120
+        height: 310
+      Color: {r: 0.3, g: 0.3, b: 0.3, a: 0.2}
+      NodeIds:
+      - d2917c7ec7404b3e9410bbd0ae495c95
+      - 9d791ee3c7cb4f9498fa062261b54f20
+      - 36727d0c2b7c43068581f4fc0a327791
+    Notes:
+    - Id: 03c2da2685d4441fb15fbcc4036aa601
+      Title: Try it
+      Contents: Play the sample scene. Increase Speed to 1, then 5. Send Reset to
+        return to Idle. Open Debug and select the sample runner to watch the history.
+      Position:
+        serializedVersion: 2
+        x: 600
+        y: 480
+        width: 773
+        height: 180
+      Color: {r: 0.55, g: 0.48, b: 0.25, a: 1}
+    ViewPosition: {x: -448, y: -221, z: 0}
+    ViewScale: {x: 1.3225, y: 1.3225, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 4756295206171574272
+      type: {class: BlackboardStateCondition, ns: AS.Modules.Stating.Graph, asm: AS.Modules.Stating}
+      data:
+        VariableId: f098e394c3774d2c9e9f041962ea604d
+        Comparison: 4
+        Value:
+          TypeName: System.Single, mscorlib
+          IsNull: 0
+          Boolean: 0
+          Integer: 0
+          Number: 0.10000000149011612
+          Text: 
+          Vector: {x: 0, y: 0, z: 0, w: 0}
+          Object: {fileID: 0}
+          Managed:
+            rid: -2
+          Items: []
+          MemberNames: []
+    - rid: 4756295206171574273
+      type: {class: BlackboardStateCondition, ns: AS.Modules.Stating.Graph, asm: AS.Modules.Stating}
+      data:
+        VariableId: f098e394c3774d2c9e9f041962ea604d
+        Comparison: 4
+        Value:
+          TypeName: System.Single, mscorlib
+          IsNull: 0
+          Boolean: 0
+          Integer: 0
+          Number: 4
+          Text: 
+          Vector: {x: 0, y: 0, z: 0, w: 0}
+          Object: {fileID: 0}
+          Managed:
+            rid: -2
+          Items: []
+          MemberNames: []

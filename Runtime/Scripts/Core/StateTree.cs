@@ -31,7 +31,20 @@ namespace AS.Modules.Stating
 
         protected override void OnExit()
         {
+            Switch(null);
             OnExitTree();
+        }
+
+        public override void Tick(float deltaTime)
+        {
+            base.Tick(deltaTime);
+            CurrentState?.Tick(deltaTime);
+        }
+
+        public override void FixedTick(float deltaTime)
+        {
+            base.FixedTick(deltaTime);
+            CurrentState?.FixedTick(deltaTime);
         }
 
         protected void Switch(State<T> subState)

@@ -1,7 +1,7 @@
 {
     "name": "AS.Modules.Stating",
     "rootNamespace": "AS.Modules.Stating",
-    "references": [],
+    "references": ["UnityEngine.UI"],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

@@ -7,6 +7,7 @@ namespace AS.Modules.Stating.Core
         public event Action<IRunnable, IRunnable> OnChangeState;
 
         private IRunnable m_CurrentState;
+        public IRunnable CurrentState => m_CurrentState;
 
         public void SwitchState(IRunnable runnable)
         {
@@ -15,9 +16,11 @@ namespace AS.Modules.Stating.Core
                 return;
             }
 
-            m_CurrentState?.Exit();
-            runnable?.Enter();
+            IRunnable previous = m_CurrentState;
+            previous?.Exit();
             m_CurrentState = runnable;
+            runnable?.Enter();
+            OnChangeState?.Invoke(previous, runnable);
         }
     }
 }
